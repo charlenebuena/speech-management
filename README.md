@@ -1,2 +1,2 @@
 # speech-management
-CRUD for speeches in the political career
+CRUD for speeches created by politicians in their political career
