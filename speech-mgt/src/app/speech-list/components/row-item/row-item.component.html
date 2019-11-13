@@ -1,12 +1,14 @@
 <div (click)="isCollapsed = !isCollapsed"
-    [attr.aria-expanded]="!isCollapsed" 
-    aria-controls="collapseExample">
-    Sample Speech
+     [attr.aria-expanded]="!isCollapsed" 
+     aria-controls="collapseExample"
+     class="speech-title clickable"
+     [class.active]="!isCollapsed">
+     Sample Speech
 </div>
-<div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="card">
-    <div class="card-body">
-        You can collapse this card by clicking Toggle
-    </div>
+<div  id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card collapse-content">
+        <div class="card-body">
+            <app-speech-form></app-speech-form>
+        </div>
     </div>
 </div>

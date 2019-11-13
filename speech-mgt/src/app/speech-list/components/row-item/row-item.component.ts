@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./row-item.component.scss']
 })
 export class RowItemComponent {
+    isCollapsed = true;
 }

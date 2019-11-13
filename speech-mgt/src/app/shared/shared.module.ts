@@ -6,10 +6,12 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SpeechFormComponent } from './components/speech-form/speech-form.component';
 
 @NgModule({
     declarations: [
-        NavbarComponent
+        NavbarComponent,
+        SpeechFormComponent
     ],
     imports: [
         CommonModule,
@@ -17,7 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         NgbCollapseModule
     ],
     exports: [
-        NavbarComponent
+        NavbarComponent,
+        SpeechFormComponent
     ]
 })
 export class SharedModule { }
