@@ -3,12 +3,16 @@
      aria-controls="collapseExample"
      class="speech-title clickable"
      [class.active]="!isCollapsed">
-     Sample Speech
+     {{speech?.speechTitle}}
 </div>
 <div  id="collapseExample" [ngbCollapse]="isCollapsed">
     <div class="card collapse-content">
         <div class="card-body">
-            <app-speech-form></app-speech-form>
+            <app-speech-form #form [speech]="speech"></app-speech-form>
+            <div class="actions">
+                <button class="btn btn-primary edit" (click)="saveEdit(form.formValues, speech._id)">Save Edit</button>
+                <button class="btn btn-danger delete-btn" (click)="deleteSpeech(speech._id)">Delete</button>
+            </div>
         </div>
     </div>
 </div>

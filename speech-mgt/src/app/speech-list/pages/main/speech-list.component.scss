@@ -1,3 +1,14 @@
 .speech-list {
     margin: 50px auto;
 }
+
+.delete {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.no-data {
+    text-align: center;
+    color: lightgray;
+    margin: 200px;
+}

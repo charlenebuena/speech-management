@@ -1,3 +1,12 @@
+
 <div class="container speech-list">
-    <app-row-item></app-row-item>
+    <div class="delete" *ngIf="speeches?.length > 0; else noData">
+        <button class="btn btn-primary" (click)="deleteAll()">Delete All Speeches</button>   
+    </div>
+    <ng-template #noData>
+        <div class="no-data">
+            Add Speeches
+        </div>
+    </ng-template>
+    <app-row-item *ngFor="let speech of speeches" [speech]="speech"></app-row-item>
 </div>

@@ -1,7 +1,7 @@
 .speech-title {
     padding: 10px 20px;
     background: whitesmoke;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     border-radius: 5px;
 }
 
@@ -13,4 +13,14 @@
 
 .collapse-content {
     transition: 1s ease-in-out;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit,
+.delete-btn {
+    margin-left: 7px;
 }

@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NewSpeechRoutingModule } from './new-speech-routing.module';
 
 import { NewSpeechComponent } from './pages/main/new-speech.component';
+import { ModalComponent } from '../shared/components/modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,9 @@ import { NewSpeechComponent } from './pages/main/new-speech.component';
     ],
     exports: [
         NewSpeechComponent
+    ], 
+    entryComponents: [
+        ModalComponent
     ]
 })
 export class NewSpeechModule { }

@@ -1,23 +1,38 @@
-<form>
+<form [formGroup]="speechForm" novalidate>
     <div class="form-group">
-        <label>Speech Title</label>
-        <input class="form-control-sm" type="email" class="form-control" placeholder="Title">
-        <small id="emailHelp" class="form-text text-muted">Title or keywords about the speech</small>
+        <label>Speech Title<small class="required">*</small></label>
+        <input class="form-control-sm form-control" 
+                type="text"
+                formControlName="speechTitle"
+                placeholder="Title">
+        <small class="form-text text-muted" *ngIf="!speechTitle">Title or keywords about the speech</small>
     </div>
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label>Author</label>
-                <input class="form-control-sm" type="email" class="form-control" placeholder="Author">
+                <label>Author<small class="required">*</small></label>
+                <input class="form-control-sm form-control" 
+                        type="text"
+                        formControlName="author"
+                        placeholder="Author">
             </div>
         </div>
         <div class="col">
-            <label>Date Created</label>
-            <input class="form-control-sm" type="text" class="form-control" placeholder="mm/dd/yyyy">
+            <label>Date Created<small class="required">*</small></label>
+            <input class="form-control-sm form-control"
+                    type="text"
+                    formControlName="dateCreated"
+                    placeholder="yyyy/mm/dd"
+                    ngbDatepicker 
+                    #d="ngbDatepicker"
+                    (click)="d.toggle()">
         </div>
     </div>
     <div class="form-group">
-        <label>Speech Content</label>
-        <textarea class="form-control-sm" class="form-control" rows="8"></textarea>
+        <label>Speech Content<small class="required">*</small></label>
+        <textarea class="form-control-sm form-control"
+                    formControlName="speechContent"
+                    rows="8">
+        </textarea>
     </div>
 </form>
