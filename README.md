@@ -22,16 +22,16 @@ Input the command `npm install -g @angular/cli` to install Angular CLI
 # Project Functions
 
 ## List of Speeches
-![](./src/assets/list.png)
+![](./speech-mgt/src/assets/list.png)
 
 ## Create New Speech
 All fields are required. When at least 1 field is left empty or the date inputed does not follow correct format, a modal with an error message pops up.
-![](./src/assets/create.png)
-![](./src/assets/validation.png)
+![](./speech-mgt/src/assets/create.png)
+![](./speech-mgt/src/assets/validation.png)
 
 ## Edit and Deletion of Speech
-![](./src/assets/edit-delete.png)
+![](./speech-mgt/src/assets/edit-delete.png)
 
 ## Search Speech
-![](./src/assets/search.png)
+![](./speech-mgt/src/assets/search.png)
 
