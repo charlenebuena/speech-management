@@ -1,7 +1,19 @@
+$topBotMargin: 50px auto;
+
 html {
     height: 100vh;
 }
 
 .clickable {
     cursor: pointer;
+}
+
+@mixin flexJustify($flex, $justify) {
+    display: $flex;
+    justify-content: $justify;
+}
+
+@mixin spinner($flex, $margin) {
+    display: $flex;
+    margin: $margin;
 }

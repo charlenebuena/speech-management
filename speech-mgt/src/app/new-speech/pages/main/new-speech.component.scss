@@ -1,9 +1,10 @@
-.new-speech {
-    margin: 50px auto;
-}
+@import '../../../../styles.scss';
 
-.btn-primary,
-.btn-secondary {
-    float: right;
-    margin: 0 0 0 10px;
+.new-speech {
+    margin: $topBotMargin;
+
+    .btn-primary {
+        float: right;
+        margin: 0 0 0 10px;
+    }
 }

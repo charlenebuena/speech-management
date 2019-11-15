@@ -51,8 +51,8 @@ export class SpeechFormComponent implements OnInit{
 	extractDate() {
 		var dateArray = null;
 		dateArray = this.speech.dateCreated ? this.speech.dateCreated.split('-') : null;
+		
 		if (dateArray) {
-			console.log(dateArray)
 			return {
 				year: parseInt(dateArray[0]),
 				month: parseInt(dateArray[1]),

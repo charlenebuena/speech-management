@@ -32,7 +32,9 @@ import { SpeechService } from './services/speech.service';
     exports: [
         NavbarComponent,
         SpeechFormComponent,
-        ModalComponent
+        ModalComponent,
+        ReactiveFormsModule,
+        FormsModule,
     ],
     providers: [
         SpeechService

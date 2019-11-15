@@ -11,17 +11,27 @@ export class SpeechService {
 
     constructor() { }
 
-    getAllSpeeches() {
-        console.log(JSON.parse(localStorage.getItem('speeches')));
-        return localStorage.getItem('speeches') ? JSON.parse(localStorage.getItem('speeches')) : [];
-    }
+    getAllSpeeches(searchString?:string) {
+        var speeches = localStorage.getItem('speeches') ? JSON.parse(localStorage.getItem('speeches')) : [];
+        var temporarySpeeches = [];
 
-    getSpeechById(id) {
-
+        if (!searchString) {
+            return speeches;
+        } else {
+            if (speeches.length > 0) {
+                for (let spch of speeches) {
+                    if (spch.speechTitle.toUpperCase().search(searchString.toUpperCase()) > -1) {
+                        temporarySpeeches.push(spch);
+                    }
+                }
+            }
+            return temporarySpeeches;
+        }
     }
 
     addNewSpeech(toBeAdded: Speech) {
         let speeches = this.getAllSpeeches();
+
         speeches.push(toBeAdded);
         localStorage.setItem('speeches', JSON.stringify(speeches));
         this.addNewSubject.next('Successfully added new speech.');
@@ -42,6 +52,7 @@ export class SpeechService {
 
     deleteSpeech(id: number){
         let speeches = this.getAllSpeeches();
+        
         if (speeches.length > 0) {
             for (let x = 0; x < speeches.length; x++) {
                 if (id === speeches[x]._id) {

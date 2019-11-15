@@ -1,14 +1,23 @@
+@import '../../../../styles.scss';
+
 .speech-list {
-    margin: 50px auto;
+    margin: $topBotMargin;
+
+    .list-actions {
+        @include flexJustify(flex, space-between);
+        margin-bottom: 20px;
+
+        .search-speeches {
+            width: 400px;
+        }
+    }
+
+    .no-data {
+        text-align: center;
+        color: lightgray;
+        margin: 200px;
+    }
 }
 
-.delete {
-    display: flex;
-    justify-content: flex-end;
-}
 
-.no-data {
-    text-align: center;
-    color: lightgray;
-    margin: 200px;
-}
+

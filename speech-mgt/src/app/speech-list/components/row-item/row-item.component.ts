@@ -32,8 +32,6 @@ export class RowItemComponent implements OnInit {
         }
 
         this.speechService.editSpeech(data, id);
-        console.log(data);
-        console.log(id);
     }
 
     deleteSpeech(id) {
